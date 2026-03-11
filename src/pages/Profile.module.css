@@ -1,0 +1,34 @@
+.page { padding: 40px 0 80px; }
+.container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+
+.card { background: var(--card); border: 1px solid var(--border); border-radius: var(--r-xl); overflow: hidden; margin-bottom: 36px; }
+.coverGrad { height: 120px; background: linear-gradient(135deg, rgba(37,99,235,0.3), rgba(6,182,212,0.2)); }
+
+.profileRow { display: flex; align-items: flex-end; gap: 20px; padding: 0 28px 24px; margin-top: -48px; flex-wrap: wrap; }
+.avatarWrap { flex-shrink: 0; }
+.avatar { width: 96px; height: 96px; border-radius: 50%; border: 4px solid var(--card); object-fit: cover; }
+.avatarFallback { width: 96px; height: 96px; border-radius: 50%; border: 4px solid var(--card); background: linear-gradient(135deg, var(--accent), var(--cyan)); display: flex; align-items: center; justify-content: center; font-family: 'Clash Display', sans-serif; font-size: 36px; font-weight: 700; color: #fff; }
+
+.profileInfo { flex: 1; padding-top: 52px; }
+.name { font-family: 'Clash Display', sans-serif; font-size: 26px; font-weight: 700; color: var(--t1); letter-spacing: -0.02em; }
+.username { font-size: 14px; color: var(--t3); margin-top: 2px; }
+.uni { font-size: 14px; color: var(--t2); margin-top: 6px; }
+.stats { display: flex; gap: 24px; margin-top: 14px; }
+.stat { text-align: center; }
+.statN { display: block; font-family: 'Clash Display', sans-serif; font-size: 22px; font-weight: 700; color: var(--t1); }
+.statL { display: block; font-size: 12px; color: var(--t3); margin-top: 2px; }
+
+.editBtns { display: flex; gap: 8px; align-items: flex-start; margin-left: auto; padding-top: 52px; flex-wrap: wrap; }
+.editRow { display: flex; gap: 10px; flex-wrap: wrap; }
+.editFields { padding: 0 28px 24px; display: flex; flex-direction: column; gap: 16px; }
+.editLabel { font-size: 13px; font-weight: 600; color: var(--t2); margin-bottom: 6px; display: block; }
+
+.bio { padding: 0 28px 24px; font-size: 15px; color: var(--t2); line-height: 1.7; }
+
+.skProfile { display: flex; gap: 20px; padding: 28px; background: var(--card); border: 1px solid var(--border); border-radius: var(--r-xl); }
+
+.listingsSection {}
+.listingsTitle { font-family: 'Clash Display', sans-serif; font-size: 22px; font-weight: 700; color: var(--t1); margin-bottom: 20px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 18px; }
+.noListings { text-align: center; padding: 60px 0; color: var(--t3); display: flex; flex-direction: column; align-items: center; gap: 10px; font-size: 15px; }
+.noListings span { font-size: 48px; }

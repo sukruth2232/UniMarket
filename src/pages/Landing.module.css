@@ -1,0 +1,59 @@
+.page { overflow: hidden; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+.hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; padding: 100px 24px 60px; text-align: center; }
+.heroBg { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+.orb1 { position: absolute; top: -200px; left: -200px; width: 700px; height: 700px; background: radial-gradient(circle, rgba(37,99,235,0.12) 0%, transparent 70%); border-radius: 50%; }
+.orb2 { position: absolute; bottom: -200px; right: -200px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(6,182,212,0.08) 0%, transparent 70%); border-radius: 50%; }
+.grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px); background-size: 60px 60px; mask-image: radial-gradient(ellipse at center, black 20%, transparent 75%); }
+
+.heroInner { position: relative; z-index: 1; max-width: 720px; }
+.pill { display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; background: rgba(37,99,235,0.1); border: 1px solid rgba(37,99,235,0.2); border-radius: 20px; font-size: 13px; color: #60a5fa; margin-bottom: 28px; animation: fadeUp 0.5s ease; }
+.pillDot { width: 7px; height: 7px; background: var(--accent2); border-radius: 50%; animation: pulse 2s infinite; }
+
+.h1 { font-family: 'Clash Display', sans-serif; font-size: clamp(48px, 8vw, 88px); font-weight: 700; color: var(--t1); line-height: 1.0; letter-spacing: -0.03em; margin-bottom: 24px; animation: fadeUp 0.5s 0.1s ease both; }
+.gradient { background: linear-gradient(135deg, #3b82f6, #06b6d4, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+.sub { font-size: 18px; color: var(--t2); max-width: 500px; margin: 0 auto 36px; line-height: 1.7; animation: fadeUp 0.5s 0.15s ease both; }
+
+.ctas { display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; animation: fadeUp 0.5s 0.2s ease both; }
+.ctaPrimary { display: flex; align-items: center; gap: 8px; padding: 14px 28px; background: var(--accent); color: #fff; border-radius: 50px; font-size: 16px; font-weight: 600; transition: all 0.2s ease; animation: glow 3s ease infinite; }
+.ctaPrimary:hover { background: #1d4ed8; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(37,99,235,0.5); }
+.ctaGhost { padding: 14px 28px; border: 1px solid var(--border); border-radius: 50px; color: var(--t2); font-size: 16px; font-weight: 500; transition: all 0.2s ease; }
+.ctaGhost:hover { border-color: var(--accent2); color: var(--accent3); }
+
+.stats { display: flex; gap: 0; margin-top: 72px; background: var(--card); border: 1px solid var(--border); border-radius: var(--r-xl); overflow: hidden; animation: fadeUp 0.5s 0.3s ease both; }
+.stat { flex: 1; padding: 28px 16px; text-align: center; border-right: 1px solid var(--border); }
+.stat:last-child { border-right: none; }
+.statVal { display: block; font-family: 'Clash Display', sans-serif; font-size: 30px; font-weight: 700; color: var(--t1); }
+.statLbl { display: block; font-size: 13px; color: var(--t3); margin-top: 4px; }
+
+.section { padding: 100px 0; }
+.featSection { background: linear-gradient(180deg, transparent, rgba(9,14,26,0.6), transparent); }
+.h2 { font-family: 'Clash Display', sans-serif; font-size: 40px; font-weight: 700; color: var(--t1); text-align: center; margin-bottom: 52px; letter-spacing: -0.02em; }
+
+.catGrid { display: grid; grid-template-columns: repeat(8, 1fr); gap: 14px; }
+.catCard { display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 24px 12px; background: var(--card); border: 1px solid var(--border); border-radius: var(--r-lg); transition: all 0.2s ease; animation: fadeUp 0.4s ease both; }
+.catCard:hover { border-color: var(--accent2); background: var(--card2); transform: translateY(-4px); box-shadow: 0 8px 24px rgba(37,99,235,0.15); }
+.catEmoji { font-size: 30px; }
+.catName { font-size: 12px; font-weight: 600; color: var(--t2); }
+
+.featGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.featCard { padding: 30px 22px; background: var(--card); border: 1px solid var(--border); border-radius: var(--r-lg); transition: all 0.2s ease; animation: fadeUp 0.4s ease both; }
+.featCard:hover { border-color: var(--border2); transform: translateY(-4px); }
+.featIcon { width: 50px; height: 50px; background: var(--glow); border: 1px solid rgba(37,99,235,0.2); border-radius: var(--r-md); display: flex; align-items: center; justify-content: center; color: var(--accent3); font-size: 22px; margin-bottom: 18px; }
+.featTitle { font-family: 'Clash Display', sans-serif; font-size: 17px; font-weight: 600; color: var(--t1); margin-bottom: 8px; }
+.featDesc { font-size: 14px; color: var(--t2); line-height: 1.6; }
+
+.ctaSection { padding: 80px 0 100px; }
+.ctaBox { position: relative; text-align: center; padding: 80px 40px; background: var(--card); border: 1px solid var(--border); border-radius: var(--r-xl); overflow: hidden; }
+.ctaGlow { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 500px; height: 300px; background: radial-gradient(ellipse, rgba(37,99,235,0.12) 0%, transparent 70%); pointer-events: none; }
+.ctaH { font-family: 'Clash Display', sans-serif; font-size: 48px; font-weight: 700; color: var(--t1); margin-bottom: 14px; letter-spacing: -0.02em; }
+.ctaSub { font-size: 18px; color: var(--t2); margin-bottom: 36px; }
+.ctaBig { display: inline-flex; align-items: center; gap: 10px; padding: 16px 36px; background: var(--accent); color: #fff; border-radius: 50px; font-size: 17px; font-weight: 600; transition: all 0.2s ease; }
+.ctaBig:hover { background: #1d4ed8; transform: translateY(-2px); box-shadow: 0 8px 40px rgba(37,99,235,0.5); }
+
+.footer { text-align: center; padding: 28px; font-size: 14px; color: var(--t4); border-top: 1px solid var(--border); }
+
+@media(max-width:1024px) { .catGrid { grid-template-columns: repeat(4,1fr); } .featGrid { grid-template-columns: repeat(2,1fr); } }
+@media(max-width:640px) { .catGrid { grid-template-columns: repeat(4,1fr); } .featGrid { grid-template-columns: 1fr; } .stats { flex-wrap: wrap; } .stat { min-width: 50%; border-bottom: 1px solid var(--border); } }

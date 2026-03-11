@@ -1,0 +1,36 @@
+.page { padding: 32px 0 80px; }
+.container { max-width: 1300px; margin: 0 auto; padding: 0 24px; }
+
+.searchBar { margin-bottom: 32px; }
+.searchForm { display: flex; align-items: stretch; background: var(--card); border: 1px solid var(--border); border-radius: var(--r-md); overflow: hidden; height: 50px; }
+.sIco { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--t3); pointer-events: none; }
+.searchForm { position: relative; }
+.sInput { flex: 1; padding: 0 16px 0 44px; background: transparent; border: none; color: var(--t1); font-size: 15px; outline: none; }
+.sInput::placeholder { color: var(--t3); }
+
+.layout { display: grid; grid-template-columns: 220px 1fr; gap: 28px; align-items: start; }
+
+.sidebar { position: sticky; top: 90px; }
+.filterSection { background: var(--card); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 20px; }
+.filterTitle { font-family: 'Clash Display', sans-serif; font-size: 16px; font-weight: 600; color: var(--t1); margin-bottom: 18px; display: flex; align-items: center; gap: 8px; }
+.filterGroup { margin-bottom: 20px; }
+.filterGroup:last-child { margin-bottom: 0; }
+.filterLabel { font-size: 12px; font-weight: 600; color: var(--t3); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px; }
+.filterChip { display: block; width: 100%; text-align: left; padding: 8px 12px; background: none; border: 1px solid transparent; border-radius: var(--r-md); font-size: 13px; color: var(--t2); cursor: pointer; transition: all 0.15s; margin-bottom: 4px; }
+.filterChip:hover { background: var(--card2); color: var(--t1); }
+.fActive { background: rgba(37,99,235,0.15); border-color: rgba(37,99,235,0.3); color: var(--accent3); }
+
+.results {}
+.resultsHeader { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+.resultsTitle { font-family: 'Clash Display', sans-serif; font-size: 22px; font-weight: 700; color: var(--t1); }
+.resultsCount { font-size: 14px; color: var(--t3); }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 18px; }
+
+.empty { text-align: center; padding: 80px 20px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.empty h3 { font-family: 'Clash Display', sans-serif; font-size: 20px; color: var(--t1); }
+.empty p { color: var(--t2); }
+
+.pages { display: flex; align-items: center; justify-content: center; gap: 16px; margin-top: 40px; }
+
+@media(max-width:768px) { .layout { grid-template-columns: 1fr; } .sidebar { position: static; } }

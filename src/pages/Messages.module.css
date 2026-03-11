@@ -1,0 +1,48 @@
+.page { height: calc(100vh - 68px); overflow: hidden; }
+.layout { display: grid; grid-template-columns: 320px 1fr; height: 100%; }
+
+.sidebar { border-right: 1px solid var(--border); overflow-y: auto; background: var(--bg2); }
+.sHead { padding: 20px 20px 14px; border-bottom: 1px solid var(--border); }
+.sTitle { font-family: 'Clash Display', sans-serif; font-size: 20px; font-weight: 700; color: var(--t1); }
+
+.loading { padding: 12px; display: flex; flex-direction: column; gap: 12px; }
+.convSk { display: flex; gap: 12px; padding: 8px; }
+
+.emptyConv { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 300px; gap: 12px; color: var(--t3); font-size: 14px; }
+
+.conv { display: flex; align-items: center; gap: 12px; padding: 14px 16px; background: none; border: none; width: 100%; text-align: left; cursor: pointer; border-bottom: 1px solid var(--border); transition: background 0.15s; }
+.conv:hover { background: var(--card); }
+.convActive { background: var(--card); border-left: 3px solid var(--accent); }
+
+.convAvatar { width: 42px; height: 42px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--cyan)); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px; color: #fff; flex-shrink: 0; }
+.convInfo { flex: 1; min-width: 0; }
+.convName { font-size: 14px; font-weight: 600; color: var(--t1); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.convLast { font-size: 12px; color: var(--t3); margin-top: 3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.convProduct { font-size: 11px; color: var(--accent3); margin-top: 3px; }
+.unread { background: var(--accent); color: #fff; border-radius: 10px; font-size: 11px; font-weight: 700; padding: 2px 7px; flex-shrink: 0; }
+
+.chat { display: flex; flex-direction: column; height: 100%; overflow: hidden; }
+
+.chatHead { display: flex; align-items: center; gap: 14px; padding: 16px 20px; border-bottom: 1px solid var(--border); background: var(--bg2); flex-shrink: 0; }
+.chatAvatar { width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--cyan)); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px; color: #fff; }
+.chatName { font-size: 15px; font-weight: 600; color: var(--t1); }
+.chatProduct { font-size: 12px; color: var(--t3); margin-top: 2px; }
+
+.messages { flex: 1; overflow-y: auto; padding: 20px; display: flex; flex-direction: column; gap: 12px; }
+
+.msg { display: flex; flex-direction: column; max-width: 65%; }
+.mine { align-self: flex-end; align-items: flex-end; }
+.theirs { align-self: flex-start; align-items: flex-start; }
+.bubble { padding: 10px 14px; border-radius: 16px; font-size: 14px; line-height: 1.5; word-break: break-word; }
+.mine .bubble { background: var(--accent); color: #fff; border-radius: 16px 16px 4px 16px; }
+.theirs .bubble { background: var(--card2); color: var(--t1); border: 1px solid var(--border); border-radius: 16px 16px 16px 4px; }
+.time { font-size: 11px; color: var(--t4); margin-top: 4px; padding: 0 4px; }
+
+.inputRow { display: flex; gap: 10px; padding: 16px 20px; border-top: 1px solid var(--border); background: var(--bg2); flex-shrink: 0; }
+.msgInput { flex: 1; }
+
+.selectConv { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; color: var(--t3); }
+.selectConv h3 { font-family: 'Clash Display', sans-serif; font-size: 20px; color: var(--t2); }
+.selectConv p { font-size: 14px; }
+
+@media(max-width:768px) { .layout { grid-template-columns: 1fr; } .sidebar { display: none; } }

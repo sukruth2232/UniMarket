@@ -1,0 +1,32 @@
+.page { padding: 32px 0 80px; }
+.container { max-width: 1300px; margin: 0 auto; padding: 0 24px; }
+
+.header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 32px; flex-wrap: wrap; gap: 16px; }
+.greeting { font-family: 'Clash Display', sans-serif; font-size: 32px; font-weight: 700; color: var(--t1); letter-spacing: -0.02em; }
+.greetSub { font-size: 15px; color: var(--t2); margin-top: 4px; }
+
+.cats { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.catChip { padding: 7px 16px; background: var(--card); border: 1px solid var(--border); border-radius: 50px; font-size: 13px; font-weight: 500; color: var(--t2); cursor: pointer; transition: all 0.2s ease; display: flex; align-items: center; gap: 6px; }
+.catChip:hover { border-color: var(--border2); color: var(--t1); }
+.catActive { background: var(--accent); border-color: var(--accent); color: #fff; }
+.catActive:hover { background: #1d4ed8; border-color: #1d4ed8; color: #fff; }
+
+.bar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.barLabel { font-family: 'Clash Display', sans-serif; font-size: 20px; font-weight: 600; color: var(--t1); }
+.sortWrap { display: flex; align-items: center; gap: 8px; }
+.sort { background: var(--card); border: 1px solid var(--border); border-radius: var(--r-md); color: var(--t2); padding: 8px 12px; font-size: 13px; outline: none; cursor: pointer; }
+.sort:focus { border-color: var(--accent2); }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
+
+.skCard { background: var(--card); border: 1px solid var(--border); border-radius: var(--r-lg); overflow: hidden; }
+.skImg { height: 180px; }
+.skBody { padding: 14px; }
+
+.empty { text-align: center; padding: 100px 20px; }
+.emptyIco { font-size: 64px; display: block; margin-bottom: 20px; }
+.empty h3 { font-family: 'Clash Display', sans-serif; font-size: 22px; color: var(--t1); margin-bottom: 8px; }
+.empty p { color: var(--t2); }
+
+.pages { display: flex; align-items: center; justify-content: center; gap: 16px; margin-top: 48px; }
+.pageNum { font-size: 14px; color: var(--t2); }
