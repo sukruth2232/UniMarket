@@ -30,20 +30,20 @@ import org.springframework.web.multipart.MultipartFile;
 @Tag(name = "Users", description = "User profile management APIs")
 public class UserController {
 
-    private final UserService userService;
+    private final UserService UserService;
 
     @GetMapping("/me")
     @Operation(summary = "Get current authenticated user profile")
     public ResponseEntity<ApiResponse<UserResponse>> getCurrentUser(
             @AuthenticationPrincipal UserDetails userDetails) {
-        UserResponse response = userService.getCurrentUser(userDetails.getUsername());
+        UserResponse response = UserService.getCurrentUser(userDetails.getUsername());
         return ResponseEntity.ok(ApiResponse.success(response));
     }
 
     @GetMapping("/{id}")
     @Operation(summary = "Get user by ID")
     public ResponseEntity<ApiResponse<UserResponse>> getUserById(@PathVariable Long id) {
-        UserResponse response = userService.getUserById(id);
+        UserResponse response = UserService.getUserById(id);
         return ResponseEntity.ok(ApiResponse.success(response));
     }
 
@@ -52,7 +52,7 @@ public class UserController {
     public ResponseEntity<ApiResponse<UserResponse>> updateProfile(
             @AuthenticationPrincipal UserDetails userDetails,
             @RequestBody UpdateProfileRequest request) {
-        UserResponse response = userService.updateProfile(userDetails.getUsername(), request);
+        UserResponse response = UserService.updateProfile(userDetails.getUsername(), request);
         return ResponseEntity.ok(ApiResponse.success("Profile updated successfully", response));
     }
 
@@ -61,7 +61,7 @@ public class UserController {
     public ResponseEntity<ApiResponse<UserResponse>> uploadProfileImage(
             @AuthenticationPrincipal UserDetails userDetails,
             @RequestParam("file") MultipartFile file) {
-        UserResponse response = userService.uploadProfileImage(userDetails.getUsername(), file);
+        UserResponse response = UserService.uploadProfileImage(userDetails.getUsername(), file);
         return ResponseEntity.ok(ApiResponse.success("Profile image uploaded successfully", response));
     }
 
@@ -72,7 +72,7 @@ public class UserController {
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int size) {
         Pageable pageable = PageRequest.of(page, size, Sort.by("createdAt").descending());
-        Page<ProductResponse> response = userService.getUserListings(id, pageable);
+        Page<ProductResponse> response = UserService.getUserListings(id, pageable);
         return ResponseEntity.ok(ApiResponse.success(response));
     }
 
@@ -80,7 +80,7 @@ public class UserController {
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = "Disable user account (Admin only)")
     public ResponseEntity<ApiResponse<Void>> deleteUser(@PathVariable Long id) {
-        userService.deleteUser(id);
+        UserService.deleteUser(id);
         return ResponseEntity.ok(ApiResponse.success("User account disabled", null));
     }
 }
